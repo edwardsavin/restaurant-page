@@ -9,25 +9,10 @@ const homeContainer = document.createElement("div");
 homeContainer.setAttribute("id", "home-container");
 
 /**
- * Wrap image into a new "image-container"
- * Append the new container to homeContainer
- */
-function wrapImage(image) {
-  const imageContainer = document.createElement("div");
-  imageContainer.setAttribute("class", "image-container");
-
-  imageContainer.appendChild(image);
-  homeContainer.appendChild(imageContainer);
-}
-
-/**
- * Wrap text into a new "text-container"
  * Create a new "p" or "h" tag and append the text-container to it
- * Append the new tag to homeContainer
+ * Return the newTag
  */
 function wrapText(text, tag, hNumber = 1) {
-  const textContainer = document.createElement("div");
-  textContainer.setAttribute("class", "text-container");
   let newTag;
 
   if (tag === "p") {
@@ -38,10 +23,25 @@ function wrapText(text, tag, hNumber = 1) {
     newTag = heading;
   }
 
-  textContainer.textContent = text;
+  newTag.textContent = text;
+  return { newTag };
+}
 
-  newTag.appendChild(textContainer);
-  homeContainer.appendChild(newTag);
+// Wrap existing tags into a new container
+function wrapTags(className = undefined, ...elements) {
+  const newContainer = document.createElement("div");
+
+  if (className !== undefined) {
+    newContainer.setAttribute("class", className);
+  }
+
+  const elementArray = elements;
+
+  elementArray.forEach((element) => {
+    newContainer.appendChild(element);
+  });
+
+  homeContainer.appendChild(newContainer);
 }
 
 /**
@@ -74,21 +74,33 @@ function addHomeContent() {
   const fourthHeading = "Heading test 4";
   const fourthParagraph = "paragraph test4";
 
-  wrapImage(firstImage);
-  wrapText(firstHeading, "h", 1);
-  wrapText(firstParagraph, "p");
+  wrapTags("image-container", firstImage);
+  wrapTags(
+    "text-container",
+    wrapText(firstHeading, "h", 1).newTag,
+    wrapText(firstParagraph, "p").newTag
+  );
 
-  wrapImage(secondImage);
-  wrapText(secondHeading, "h", 1);
-  wrapText(secondParagraph, "p");
+  wrapTags("image-container", secondImage);
+  wrapTags(
+    "text-container",
+    wrapText(secondHeading, "h", 1).newTag,
+    wrapText(secondParagraph, "p").newTag
+  );
 
-  wrapImage(thirdImage);
-  wrapText(thirdHeading, "h", 1);
-  wrapText(thirdParagraph, "p");
+  wrapTags("image-container", thirdImage);
+  wrapTags(
+    "text-container",
+    wrapText(thirdHeading, "h", 1).newTag,
+    wrapText(thirdParagraph, "p").newTag
+  );
 
-  wrapImage(fourthImage);
-  wrapText(fourthHeading, "h", 1);
-  wrapText(fourthParagraph, "p");
+  wrapTags("image-container", fourthImage);
+  wrapTags(
+    "text-container",
+    wrapText(fourthHeading, "h", 1).newTag,
+    wrapText(fourthParagraph, "p").newTag
+  );
 
   content.appendChild(homeContainer);
 }
