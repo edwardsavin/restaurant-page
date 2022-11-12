@@ -107,6 +107,7 @@ svg {
     "txt2 img2"
     "img3 txt3"
     "txt4 img4";
+  justify-content: center;
 }
 
 /* Grid areas */
