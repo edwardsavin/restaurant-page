@@ -74,30 +74,30 @@ function addHomeContent() {
   const fourthHeading = "Heading test 4";
   const fourthParagraph = "paragraph test4";
 
-  wrapTags("image-container", firstImage);
+  wrapTags("image-container img1", firstImage);
   wrapTags(
-    "text-container",
+    "text-container txt1",
     wrapText(firstHeading, "h", 1).newTag,
     wrapText(firstParagraph, "p").newTag
   );
 
-  wrapTags("image-container", secondImage);
+  wrapTags("image-container img2", secondImage);
   wrapTags(
-    "text-container",
+    "text-container txt2",
     wrapText(secondHeading, "h", 1).newTag,
     wrapText(secondParagraph, "p").newTag
   );
 
-  wrapTags("image-container", thirdImage);
+  wrapTags("image-container img3", thirdImage);
   wrapTags(
-    "text-container",
+    "text-container txt3",
     wrapText(thirdHeading, "h", 1).newTag,
     wrapText(thirdParagraph, "p").newTag
   );
 
-  wrapTags("image-container", fourthImage);
+  wrapTags("image-container img4", fourthImage);
   wrapTags(
-    "text-container",
+    "text-container txt4",
     wrapText(fourthHeading, "h", 1).newTag,
     wrapText(fourthParagraph, "p").newTag
   );
