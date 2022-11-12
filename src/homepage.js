@@ -50,16 +50,16 @@ function wrapTags(className = undefined, ...elements) {
  * Append all elements to home container
  */
 function addHomeContent() {
-  const firstImage = new Image(736, 500);
+  const firstImage = new Image(800, 500);
   firstImage.src = HandPizza;
 
-  const secondImage = new Image(736, 500);
+  const secondImage = new Image(800, 500);
   secondImage.src = IceCream;
 
-  const thirdImage = new Image(736, 500);
+  const thirdImage = new Image(800, 500);
   thirdImage.src = RestaurantInside;
 
-  const fourthImage = new Image(736, 500);
+  const fourthImage = new Image(800, 500);
   fourthImage.src = RestaurantTeam;
 
   const txt1H1 =

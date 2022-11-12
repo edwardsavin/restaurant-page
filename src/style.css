@@ -27,6 +27,9 @@
   --fs-700: 1.75rem;
   --fs-800: 2rem;
   --fs-900: 2.25rem;
+  --fs-1000: 2.5rem;
+  --fs-1100: 2.75rem;
+  --fs-1200: 3rem;
 }
 
 @font-face {
@@ -69,6 +72,7 @@ body {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background-color: var(--clr-neutral-400);
 }
 
 /* A elements that don't have a class get default styles */
@@ -100,14 +104,35 @@ svg {
   }
 }
 
+h1 {
+  font-size: var(--fs-1200);
+  font-weight: var(--fw-bold);
+  color: var(--clr-accent-700);
+  max-width: 75%;
+  line-height: 3.6rem;
+}
+
+p {
+  font-size: var(--fs-500);
+  color: var(--clr-primary-400);
+  max-width: 75%;
+}
+
+#content {
+  display: grid;
+}
+
 #home-container {
+  max-width: 60%;
   display: grid;
   grid-template:
     "img1 txt1"
     "txt2 img2"
     "img3 txt3"
     "txt4 img4";
-  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  background-color: var(--clr-neutral-100);
 }
 
 /* Grid areas */
@@ -115,30 +140,46 @@ svg {
   grid-area: img1;
 }
 
-.txt1 {
-  grid-area: txt1;
-}
-
 .img2 {
   grid-area: img2;
-}
-
-.txt2 {
-  grid-area: txt2;
 }
 
 .img3 {
   grid-area: img3;
 }
 
-.txt3 {
-  grid-area: txt3;
-}
-
 .img4 {
   grid-area: img4;
 }
 
+.txt1 {
+  grid-area: txt1;
+}
+
+.txt2 {
+  grid-area: txt2;
+}
+
+.txt3 {
+  grid-area: txt3;
+}
+
 .txt4 {
   grid-area: txt4;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.txt2 > p:nth-child(2) {
+  font-style: italic;
+}
+
+.txt2 > p:nth-child(3) {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-light);
 }
