@@ -2,47 +2,12 @@ import HandPizza from "./imgs/hand-holding-pizza.jpg";
 import IceCream from "./imgs/ice-cream.jpg";
 import RestaurantInside from "./imgs/restaurant-inside.jpg";
 import RestaurantTeam from "./imgs/restaurant-team.jpg";
+import { wrapTags, wrapText } from "./wrappers";
 
 const content = document.querySelector("#content");
 
 const homeContainer = document.createElement("div");
 homeContainer.setAttribute("id", "home-container");
-
-/**
- * Create a new "p" or "h" tag and append the text-container to it
- * Return the newTag
- */
-function wrapText(text, tag, hNumber = 1) {
-  let newTag;
-
-  if (tag === "p") {
-    const paragraph = document.createElement("p");
-    newTag = paragraph;
-  } else if (tag === "h") {
-    const heading = document.createElement(`h${hNumber}`);
-    newTag = heading;
-  }
-
-  newTag.textContent = text;
-  return { newTag };
-}
-
-// Wrap existing tags into a new container
-function wrapTags(className = undefined, ...elements) {
-  const newContainer = document.createElement("div");
-
-  if (className !== undefined) {
-    newContainer.setAttribute("class", className);
-  }
-
-  const elementArray = elements;
-
-  elementArray.forEach((element) => {
-    newContainer.appendChild(element);
-  });
-
-  homeContainer.appendChild(newContainer);
-}
 
 /**
  * Assign images and text to variables
@@ -86,32 +51,36 @@ function addHomeContent() {
     "For 23 years we've been serving up our delicious pizzas and have remained devoted to treating our employees in that same spirit that we cook the food: with care and love. You know what you want, and we'll embrace that when you work here. Flexibility. Fun. The feeling that you can just be you.";
   const txt4P3 = "No zero-contracts. No nonsense. Jobs and careers done right.";
 
-  wrapTags("image-container img1", firstImage);
+  wrapTags("image-container img1", homeContainer, firstImage);
   wrapTags(
     "text-container txt1",
+    homeContainer,
     wrapText(txt1H1, "h", 1).newTag,
     wrapText(txt1P1, "p").newTag
   );
 
-  wrapTags("image-container img2", secondImage);
+  wrapTags("image-container img2", homeContainer, secondImage);
   wrapTags(
     "text-container txt2",
+    homeContainer,
     wrapText(txt2H1, "h", 1).newTag,
     wrapText(txt2P1, "p").newTag,
     wrapText(txt2P2, "p").newTag
   );
 
-  wrapTags("image-container img3", thirdImage);
+  wrapTags("image-container img3", homeContainer, thirdImage);
   wrapTags(
     "text-container txt3",
+    homeContainer,
     wrapText(txt3H1, "h", 1).newTag,
     wrapText(txt3P1, "p").newTag,
     wrapText(txt3P2, "p").newTag
   );
 
-  wrapTags("image-container img4", fourthImage);
+  wrapTags("image-container img4", homeContainer, fourthImage);
   wrapTags(
     "text-container txt4",
+    homeContainer,
     wrapText(txt4H1, "h", 1).newTag,
     wrapText(txt4P1, "p").newTag,
     wrapText(txt4P2, "p").newTag,
