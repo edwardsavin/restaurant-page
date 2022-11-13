@@ -105,9 +105,8 @@ svg {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  margin-left: 24%;
+  position: sticky;
+  top: 0;
 }
 
 h1 {
@@ -145,6 +144,14 @@ p {
     "txt4 img4";
   justify-self: center;
   align-items: center;
+  background-color: var(--clr-neutral-100);
+}
+
+.header-utility {
+  display: flex;
+  align-items: center;
+  padding-left: 24%;
+  width: 100%;
   background-color: var(--clr-neutral-100);
 }
 
