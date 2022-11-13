@@ -180,6 +180,44 @@ p {
   padding-bottom: 0.62em;
 }
 
+.footer {
+  background-color: var(--clr-primary-400);
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 24%;
+}
+
+.footer > p {
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-400);
+}
+
+.footer > p > a {
+  color: var(--clr-accent-700);
+  text-decoration: none;
+  background: linear-gradient(
+      to right,
+      var(--clr-primary-400),
+      var(--clr-accent-400)
+    ),
+    linear-gradient(
+      to right,
+      var(--clr-primary-400),
+      var(--clr-accent-400),
+      var(--clr-accent-700)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.footer > p > a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
 /* Grid areas */
 .img1 {
   grid-area: img1;
