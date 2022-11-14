@@ -161,6 +161,10 @@ p {
   background-color: var(--clr-neutral-100);
 }
 
+.header-utility > a {
+  text-decoration: none;
+}
+
 .navigation {
   display: flex;
   justify-content: center;
