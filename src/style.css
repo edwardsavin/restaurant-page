@@ -30,6 +30,7 @@
   --fs-1000: 2.5rem;
   --fs-1100: 2.75rem;
   --fs-1200: 3rem;
+  --fs-1600: 4rem;
 }
 
 @font-face {
@@ -117,6 +118,11 @@ h1 {
   line-height: 3.6rem;
 }
 
+h3 {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+}
+
 p {
   font-size: var(--fs-500);
   color: var(--clr-primary-400);
@@ -187,6 +193,12 @@ p {
   align-items: center;
   justify-content: flex-end;
   padding-right: 24%;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer > p {
@@ -265,4 +277,76 @@ p {
 .txt2 > p:nth-child(3) {
   font-size: var(--fs-400);
   font-weight: var(--fw-light);
+}
+
+#food-menu-container {
+  width: 60%;
+  display: grid;
+  justify-self: center;
+  gap: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.food-menu-header {
+  justify-self: start;
+  border-bottom: 1px solid var(--clr-accent-400);
+}
+
+.food-menu-page-content {
+  display: grid;
+  gap: 1em;
+  grid-template: "menu-category menu-content menu-content menu-content";
+  grid-template-columns: 1.1fr 3fr;
+}
+
+.food-category {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--clr-accent-400);
+  grid-area: menu-category;
+  padding: 2em;
+  min-height: 8em;
+  gap: 2em;
+}
+
+.food-category:hover {
+  color: var(--clr-accent-700);
+}
+
+.food-menu-content {
+  grid-area: menu-content;
+}
+
+.food-menu-content-image {
+  background-image: url(./imgs/pizza-bites.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 270px;
+}
+
+.food-menu-content-text {
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.food-menu-content-text > h1 {
+  color: var(--clr-neutral-100);
+  font-size: var(--fs-1600);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.item-wrapper,
+.item-wrapper:visited {
+  text-decoration: none;
+  color: var(--clr-primary-400);
 }
