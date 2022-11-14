@@ -34,4 +34,14 @@ function wrapTags(className = undefined, mainContainer, ...elements) {
   mainContainer.appendChild(newContainer);
 }
 
-export { wrapText, wrapTags };
+// Create new anchor tag with multiple attributes
+function anchorTagFactory(className, href, title) {
+  const newAnchor = document.createElement("a");
+  newAnchor.setAttribute("class", className);
+  newAnchor.setAttribute("href", href);
+  newAnchor.setAttribute("title", title);
+
+  return { newAnchor };
+}
+
+export { wrapText, wrapTags, anchorTagFactory };
