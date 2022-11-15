@@ -3,8 +3,6 @@ import { navigationBarListener } from "./functions/navbarlistener";
 import { addHomeContent, homeContainer } from "./pages/homepage";
 import { addFoodMenuContent, foodMenuContainer } from "./pages/foodmenu";
 
-import { addFoodMenuItemPizzas } from "./pages/foodmenu-items/foodmenu-item-pizzas";
-
 const content = document.querySelector("#content");
 
 const navigationHomeButton = document.querySelector("#navigation-home");
@@ -43,7 +41,6 @@ navigationBarListener(navigationHomeButton);
 navigationBarListener(navigationFoodMenuButton);
 navigationBarListener(navigationJobsButton);
 
-// addHomeContent();
-addFoodMenuItemPizzas()
+addHomeContent();
 
 export { wipeContent, populateContent };

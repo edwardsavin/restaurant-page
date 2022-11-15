@@ -6,8 +6,10 @@ import PizzaCapricciosa from "../../imgs/pizza-capricciosa.png";
 import PizzaProsciuttoEFunghi from "../../imgs/pizza-prosciutto-e-funghi.png";
 import PizzaCalzone from "../../imgs/pizza-calzone.png";
 
-function addFoodMenuItemPizzas() {
-  addFoodMenuContent();
+function addFoodMenuItemPizzas(withFoodMenuContent = true) {
+  if (withFoodMenuContent === true) {
+    addFoodMenuContent();
+  }
 
   const foodMenuHeader = document.querySelector(".food-menu-header");
   const foodMenuHeaderText = foodMenuHeader.firstChild;

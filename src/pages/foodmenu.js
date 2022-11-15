@@ -2,6 +2,11 @@ import { wrapTags, wrapText, anchorTagFactory } from "../functions/wrappers";
 import PizzaMargherita from "../imgs/pizza-margherita.png";
 import ChocolateCake from "../imgs/chocolate-cake.png";
 import CoffeeCup from "../imgs/coffee-cup.png";
+import {
+  navigationBarListener,
+  foodMenuContentListener,
+} from "../functions/navbarlistener";
+import { addFoodMenuItemPizzas } from "./foodmenu-items/foodmenu-item-pizzas";
 
 const content = document.querySelector("#content");
 
@@ -61,7 +66,7 @@ function addFoodMenuContent() {
   // Menu item1
   const anchorItem1 = anchorTagFactory(
     "item-wrapper item1",
-    "#",
+    "javascript:;",
     `${txtItem1}`
   );
   const wrapperItem1 = foodMenuCategories.appendChild(anchorItem1.newAnchor);
@@ -75,7 +80,7 @@ function addFoodMenuContent() {
   // Menu item2
   const anchorItem2 = anchorTagFactory(
     "item-wrapper item2",
-    "#",
+    "javascript:;",
     `${txtItem2}`
   );
   const wrapperItem2 = foodMenuCategories.appendChild(anchorItem2.newAnchor);
@@ -89,7 +94,7 @@ function addFoodMenuContent() {
   // Menu item3
   const anchorItem3 = anchorTagFactory(
     "item-wrapper item3",
-    "#",
+    "javascript:;",
     `${txtItem3}`
   );
   const wrapperItem3 = foodMenuCategories.appendChild(anchorItem3.newAnchor);
@@ -110,6 +115,16 @@ function addFoodMenuContent() {
   );
 
   content.appendChild(foodMenuContainer);
+
+  const foodCategoryItem1 = document.querySelector(".item-wrapper.item1");
+
+  foodMenuContentListener(foodCategoryItem1);
 }
 
-export { addFoodMenuContent, foodMenuContainer };
+function populateFoodMenuContent(buttonClassName) {
+  if (buttonClassName === "item-wrapper item1") {
+    addFoodMenuItemPizzas(false);
+  }
+}
+
+export { addFoodMenuContent, foodMenuContainer, populateFoodMenuContent };
