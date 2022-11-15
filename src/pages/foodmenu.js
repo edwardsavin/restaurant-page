@@ -1,7 +1,7 @@
-import { wrapTags, wrapText, anchorTagFactory } from "./wrappers";
-import PizzaMargherita from "./imgs/pizza-margherita.png";
-import ChocolateCake from "./imgs/chocolate-cake.png";
-import CoffeeCup from "./imgs/coffee-cup.png";
+import { wrapTags, wrapText, anchorTagFactory } from "../functions/wrappers";
+import PizzaMargherita from "../imgs/pizza-margherita.png";
+import ChocolateCake from "../imgs/chocolate-cake.png";
+import CoffeeCup from "../imgs/coffee-cup.png";
 
 const content = document.querySelector("#content");
 

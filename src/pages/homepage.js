@@ -1,8 +1,8 @@
-import HandPizza from "./imgs/hand-holding-pizza.jpg";
-import IceCream from "./imgs/ice-cream.jpg";
-import RestaurantInside from "./imgs/restaurant-inside.jpg";
-import RestaurantTeam from "./imgs/restaurant-team.jpg";
-import { wrapTags, wrapText } from "./wrappers";
+import HandPizza from "../imgs/hand-holding-pizza.jpg";
+import IceCream from "../imgs/ice-cream.jpg";
+import RestaurantInside from "../imgs/restaurant-inside.jpg";
+import RestaurantTeam from "../imgs/restaurant-team.jpg";
+import { wrapTags, wrapText } from "../functions/wrappers";
 
 const content = document.querySelector("#content");
 

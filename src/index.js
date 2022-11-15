@@ -1,7 +1,7 @@
 import "./style.css";
-import { navigationBarListener } from "./navbarlistener";
-import { addHomeContent, homeContainer } from "./homepage";
-import { addFoodMenuContent, foodMenuContainer } from "./foodmenu";
+import { navigationBarListener } from "./functions/navbarlistener";
+import { addHomeContent, homeContainer } from "./pages/homepage";
+import { addFoodMenuContent, foodMenuContainer } from "./pages/foodmenu";
 
 const content = document.querySelector("#content");
 

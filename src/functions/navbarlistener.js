@@ -1,4 +1,4 @@
-import { wipeContent, populateContent } from "./index";
+import { wipeContent, populateContent } from "../index";
 
 function navigationBarListener(buttonName) {
   buttonName.addEventListener("click", () => {
