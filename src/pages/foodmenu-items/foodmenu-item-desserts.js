@@ -32,78 +32,78 @@ function addFoodMenuItemDeserts(withFoodMenuContent = true) {
   const dessertTiramisu = new Image(273, 200);
   dessertTiramisu.src = DessertTiramisu;
 
-  const txtPizzasItem1 = "Vegan Macadamia Ice Cream";
+  const txtdessertsItem1 = "Vegan Macadamia Ice Cream";
 
-  const txtPizzasItem2 = "Banana Split";
+  const txtdessertsItem2 = "Banana Split";
 
-  const txtPizzasItem3 = "Cheesecake";
+  const txtdessertsItem3 = "Cheesecake";
 
-  const txtPizzasItem4 = "Tiramisu";
+  const txtdessertsItem4 = "Tiramisu";
 
   foodMenuContent.appendChild(foodMenuContentItems);
 
   // Menu item1
-  const pizzasAnchorItem1 = anchorTagFactory(
-    "item-wrapper pizzas-item1",
+  const dessertsAnchorItem1 = anchorTagFactory(
+    "item-wrapper desserts-item1",
     "#",
-    `${txtPizzasItem1}`
+    `${txtdessertsItem1}`
   );
-  const pizzasWrapperItem1 = foodMenuContentItems.appendChild(
-    pizzasAnchorItem1.newAnchor
+  const dessertsWrapperItem1 = foodMenuContentItems.appendChild(
+    dessertsAnchorItem1.newAnchor
   );
   wrapTags(
     "food-content-items",
-    pizzasWrapperItem1,
+    dessertsWrapperItem1,
     dessertMacadamiaIceCream,
-    wrapText(txtPizzasItem1, "h", 3).newTag
+    wrapText(txtdessertsItem1, "h", 3).newTag
   );
 
   // Menu item2
-  const pizzasAnchorItem2 = anchorTagFactory(
-    "item-wrapper pizzas-item2",
+  const dessertsAnchorItem2 = anchorTagFactory(
+    "item-wrapper desserts-item2",
     "#",
-    `${txtPizzasItem2}`
+    `${txtdessertsItem2}`
   );
-  const pizzasWrapperItem2 = foodMenuContentItems.appendChild(
-    pizzasAnchorItem2.newAnchor
+  const dessertsWrapperItem2 = foodMenuContentItems.appendChild(
+    dessertsAnchorItem2.newAnchor
   );
   wrapTags(
     "food-content-items",
-    pizzasWrapperItem2,
+    dessertsWrapperItem2,
     dessertBananaSplit,
-    wrapText(txtPizzasItem2, "h", 3).newTag
+    wrapText(txtdessertsItem2, "h", 3).newTag
   );
 
   // Menu item3
-  const pizzasAnchorItem3 = anchorTagFactory(
-    "item-wrapper pizzas-item3",
+  const dessertsAnchorItem3 = anchorTagFactory(
+    "item-wrapper desserts-item3",
     "#",
-    `${txtPizzasItem3}`
+    `${txtdessertsItem3}`
   );
-  const pizzasWrapperItem3 = foodMenuContentItems.appendChild(
-    pizzasAnchorItem3.newAnchor
+  const dessertsWrapperItem3 = foodMenuContentItems.appendChild(
+    dessertsAnchorItem3.newAnchor
   );
   wrapTags(
     "food-content-items",
-    pizzasWrapperItem3,
+    dessertsWrapperItem3,
     dessertCheeseCake,
-    wrapText(txtPizzasItem3, "h", 3).newTag
+    wrapText(txtdessertsItem3, "h", 3).newTag
   );
 
   // Menu item4
-  const pizzasAnchorItem4 = anchorTagFactory(
-    "item-wrapper pizzas-item4",
+  const dessertsAnchorItem4 = anchorTagFactory(
+    "item-wrapper desserts-item4",
     "#",
-    `${txtPizzasItem4}`
+    `${txtdessertsItem4}`
   );
-  const pizzasWrapperItem4 = foodMenuContentItems.appendChild(
-    pizzasAnchorItem4.newAnchor
+  const dessertsWrapperItem4 = foodMenuContentItems.appendChild(
+    dessertsAnchorItem4.newAnchor
   );
   wrapTags(
     "food-content-items",
-    pizzasWrapperItem4,
+    dessertsWrapperItem4,
     dessertTiramisu,
-    wrapText(txtPizzasItem4, "h", 3).newTag
+    wrapText(txtdessertsItem4, "h", 3).newTag
   );
 }
 

@@ -5,6 +5,7 @@ import CoffeeCup from "../imgs/coffee-cup.png";
 import { foodMenuContentListener } from "../functions/navbarlistener";
 import { addFoodMenuItemPizzas } from "./foodmenu-items/foodmenu-item-pizzas";
 import { addFoodMenuItemDeserts } from "./foodmenu-items/foodmenu-item-desserts";
+import { addFoodMenuItemDrinks } from "./foodmenu-items/foodmenu-item-drinks";
 
 const content = document.querySelector("#content");
 
@@ -116,9 +117,11 @@ function addFoodMenuContent() {
 
   const foodCategoryItem1 = document.querySelector(".item-wrapper.item1");
   const foodCategoryItem2 = document.querySelector(".item-wrapper.item2");
+  const foodCategoryItem3 = document.querySelector(".item-wrapper.item3");
 
   foodMenuContentListener(foodCategoryItem1);
   foodMenuContentListener(foodCategoryItem2);
+  foodMenuContentListener(foodCategoryItem3);
 }
 
 function populateFoodMenuContent(buttonClassName) {
@@ -126,6 +129,8 @@ function populateFoodMenuContent(buttonClassName) {
     addFoodMenuItemPizzas(false);
   } else if (buttonClassName === "item-wrapper item2") {
     addFoodMenuItemDeserts(false);
+  } else if (buttonClassName === "item-wrapper item3") {
+    addFoodMenuItemDrinks(false);
   }
 }
 
