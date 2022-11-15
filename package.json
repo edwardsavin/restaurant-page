@@ -1,6 +1,6 @@
 {
   "name": "restaurant-page",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Restaurant page project made for The Odin Project JavaScript Course \"Restaurant Page\" Assignment.",
   "main": "index.js",
   "scripts": {

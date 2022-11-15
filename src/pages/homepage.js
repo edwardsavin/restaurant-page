@@ -24,6 +24,7 @@ function addHomeContent() {
   const secondImage = new Image(800, 500);
   secondImage.src = IceCream;
 
+  // TODO: crop image top side (top-right color = white, doesn't connect with previous image)
   const thirdImage = new Image(800, 500);
   thirdImage.src = RestaurantInside;
 
