@@ -2,11 +2,9 @@ import { wrapTags, wrapText, anchorTagFactory } from "../functions/wrappers";
 import PizzaMargherita from "../imgs/pizza-margherita.png";
 import ChocolateCake from "../imgs/chocolate-cake.png";
 import CoffeeCup from "../imgs/coffee-cup.png";
-import {
-  navigationBarListener,
-  foodMenuContentListener,
-} from "../functions/navbarlistener";
+import { foodMenuContentListener } from "../functions/navbarlistener";
 import { addFoodMenuItemPizzas } from "./foodmenu-items/foodmenu-item-pizzas";
+import { addFoodMenuItemDeserts } from "./foodmenu-items/foodmenu-item-desserts";
 
 const content = document.querySelector("#content");
 
@@ -50,7 +48,7 @@ function addFoodMenuContent() {
 
   const txtItem1 = "Pizzas";
 
-  const txtItem2 = "Deserts";
+  const txtItem2 = "Desserts";
 
   const txtItem3 = "Coffee & Beverages";
 
@@ -117,13 +115,17 @@ function addFoodMenuContent() {
   content.appendChild(foodMenuContainer);
 
   const foodCategoryItem1 = document.querySelector(".item-wrapper.item1");
+  const foodCategoryItem2 = document.querySelector(".item-wrapper.item2");
 
   foodMenuContentListener(foodCategoryItem1);
+  foodMenuContentListener(foodCategoryItem2);
 }
 
 function populateFoodMenuContent(buttonClassName) {
   if (buttonClassName === "item-wrapper item1") {
     addFoodMenuItemPizzas(false);
+  } else if (buttonClassName === "item-wrapper item2") {
+    addFoodMenuItemDeserts(false);
   }
 }
 
