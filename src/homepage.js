@@ -15,6 +15,9 @@ homeContainer.setAttribute("id", "home-container");
  * Append all elements to home container
  */
 function addHomeContent() {
+  const footer = document.querySelector(".footer");
+  footer.classList.remove("footer-fixed");
+
   const firstImage = new Image(800, 500);
   firstImage.src = HandPizza;
 
@@ -90,4 +93,4 @@ function addHomeContent() {
   content.appendChild(homeContainer);
 }
 
-export { addHomeContent };
+export { addHomeContent, homeContainer };

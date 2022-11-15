@@ -3,9 +3,6 @@ import PizzaMargherita from "./imgs/pizza-margherita.png";
 import ChocolateCake from "./imgs/chocolate-cake.png";
 import CoffeeCup from "./imgs/coffee-cup.png";
 
-const footer = document.querySelector(".footer");
-footer.classList.add("footer-fixed");
-
 const content = document.querySelector("#content");
 
 const foodMenuContainer = document.createElement("div");
@@ -18,6 +15,9 @@ foodMenuContainer.setAttribute("id", "food-menu-container");
  * Append all elements to foodMenuContainer
  */
 function addFoodMenuContent() {
+  const footer = document.querySelector(".footer");
+  footer.classList.add("footer-fixed");
+
   const foodMenuPageContent = document.createElement("div");
   foodMenuPageContent.setAttribute("class", "food-menu-page-content");
 
@@ -112,4 +112,4 @@ function addFoodMenuContent() {
   content.appendChild(foodMenuContainer);
 }
 
-export { addFoodMenuContent };
+export { addFoodMenuContent, foodMenuContainer };
