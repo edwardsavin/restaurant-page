@@ -2,6 +2,7 @@ import "./style.css";
 import { navigationBarListener } from "./functions/navbarlistener";
 import { addHomeContent, homeContainer } from "./pages/homepage";
 import { addFoodMenuContent, foodMenuContainer } from "./pages/foodmenu";
+import { addFindJobsContent, findJobsContainer } from "./pages/findjobs";
 
 const content = document.querySelector("#content");
 
@@ -31,9 +32,7 @@ function populateContent(buttonId) {
   } else if (buttonId === navigationFoodMenuButton.id) {
     addFoodMenuContent();
   } else if (buttonId === navigationJobsButton.id) {
-    // TODO: remove alert and add find jobs page content
-    alert("Find jobs page not ready yet, redirecting to homepage...");
-    addHomeContent();
+    addFindJobsContent();
   }
 }
 

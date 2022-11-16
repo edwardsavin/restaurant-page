@@ -372,3 +372,45 @@ p {
   gap: 1em;
   text-align: center;
 }
+
+.find-jobs-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.find-jobs-section-intro {
+  display: flex;
+  justify-content: center;
+  background-color: var(--clr-accent-700);
+  padding: 6em;
+}
+
+.find-jobs-section-intro-wrapper {
+  max-width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.find-jobs-section-contact {
+  padding: 4em;
+}
+
+.staff-member {
+  background-image: url(./imgs/restaurant-staff-member.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 600px;
+  width: 600px;
+}
+
+.staff-text {
+  gap: 1rem;
+}
+
+.staff-text > h1 {
+  color: var(--clr-neutral-100);
+}
