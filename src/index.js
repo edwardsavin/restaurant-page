@@ -21,6 +21,10 @@ function wipeContent() {
     foodMenuContainer.removeChild(foodMenuContainer.firstChild);
   }
 
+  while (findJobsContainer.firstChild) {
+    findJobsContainer.removeChild(findJobsContainer.firstChild);
+  }
+
   while (content.firstChild) {
     content.removeChild(content.firstChild);
   }
